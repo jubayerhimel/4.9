@@ -214,9 +214,6 @@ static void dt2w_input_event(struct input_handle *handle, unsigned int type,
 		(code==ABS_MT_TRACKING_ID) ? "ID" :
 		"undef"), code, value);
 #endif
-	if (is_display_on())
-		return;
-
 	if (code == ABS_MT_SLOT) {
 		doubletap2wake_reset();
 		return;
