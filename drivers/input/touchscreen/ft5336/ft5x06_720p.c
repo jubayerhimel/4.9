@@ -628,7 +628,7 @@ static int ft5x06_ts_suspend(struct device *dev)
 	int err;
 
 #ifdef CONFIG_TOUCHSCREEN_DOUBLETAP2WAKE
-	if (dt2w_switch > 0 && !dt2w_incall_on()) {
+	if (dt2w_switch > 0) {
 		if (!ev_btn_status) {
 			/* release all touches */
 			for (i = 0; i < data->pdata->num_max_touches; i++) {
